@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ResourceNest – Find learning and career resources in one place</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="ResourceNest home"><img src="assets/logo.svg" alt="" width="32" height="32"><span>ResourceNest</span></a>
+  <nav aria-label="Primary"><ul>
+    <li><a href="#explore">Explore</a></li><li><a href="#roadmaps">Roadmaps</a></li><li><a href="#career">Career prep</a></li><li><a href="#docs">Developer docs</a></li><li><a href="#status">Project status</a></li>
+  </ul></nav>
+  <a class="btn primary" href="#explore">Browse resources</a>
+</div></header>
+
+<main id="main">
+<section class="hero" id="top"><div class="wrap row">
+  <div>
+    <h1>Good resources, found in one place.</h1>
+    <p class="lead">ResourceNest collects guides, roadmaps, documentation, and career tools for students, developers, fresh graduates, and job seekers, so you spend less time searching and more time learning.</p>
+    <div class="cta"><a class="btn primary" href="#explore">Browse resources</a><a class="btn" href="#roadmaps">Follow a roadmap</a></div>
+  </div>
+  <div class="finder" role="group" aria-labelledby="f-h">
+    <h2 id="f-h">Not sure where to start?</h2>
+    <p>Pick your goal and we'll point you to a first step.</p>
+    <div class="opts" id="goals"></div>
+    <div class="result" id="goal-result" aria-live="polite"><p>Choose a goal above to see a starting point.</p></div>
+  </div>
+</div></section>
+
+<section id="explore"><div class="wrap">
+  <div class="sec-head"><h2>Explore by topic</h2><p class="lead">Search the collection or filter by category. Every link opens the original source in a new tab.</p></div>
+  <div class="toolbar">
+    <label for="q" class="sr" style="position:absolute;left:-9999px">Search resources</label>
+    <input id="q" class="search" type="search" placeholder="Search resources, for example “react” or “resume”" autocomplete="off">
+  </div>
+  <div class="opts" id="cats" role="group" aria-label="Filter by category"></div>
+  <p id="count" aria-live="polite" style="font-size:14px;color:var(--text-tertiary);margin-bottom:var(--s6)"></p>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="roadmaps" style="background:var(--surface-raised);border-block:1px solid var(--border-default)"><div class="wrap">
+  <div class="sec-head"><h2>Roadmaps from beginner to advanced</h2><p class="lead">Choose a path and tick off each step as you finish it. Progress is saved in this browser.</p></div>
+  <div class="tabs" role="tablist" aria-label="Roadmaps" id="tabs"></div>
+  <div class="bar" role="progressbar" aria-label="Roadmap progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="pbar"><b></b></div>
+  <p id="ptext" style="font-size:14px;color:var(--text-tertiary);margin:calc(var(--s4)*-1) 0 var(--s6)" aria-live="polite"></p>
+  <ol class="steps" id="steps"></ol>
+</div></section>
+
+<section id="career"><div class="wrap">
+  <div class="sec-head"><h2>Resume, interviews, and career guidance</h2><p class="lead">A short checklist for each stage of the job search.</p></div>
+  <div class="two">
+    <div class="card"><span class="tag">Resume</span><h3>Make it easy to scan</h3><ul><li>Keep it to one page as a fresher.</li><li>Lead each project with what you built and the result.</li><li>List the stack you used, not every tool you have seen.</li><li>Link a live demo and your repository.</li></ul></div>
+    <div class="card"><span class="tag">Interview</span><h3>Practice out loud</h3><ul><li>Revise core Java, SQL, and web fundamentals.</li><li>Solve a few data-structure problems each week.</li><li>Prepare a two-minute walkthrough of your best project.</li><li>Explain trade-offs, not only answers.</li></ul></div>
+    <div class="card"><span class="tag">Career</span><h3>Choose a direction</h3><ul><li>Pick one role to aim at first, such as full stack or data.</li><li>Build two or three projects that fit that role.</li><li>Start applying before you feel completely ready.</li><li>Track applications in a simple sheet.</li></ul></div>
+  </div>
+</div></section>
+
+<section id="docs" style="background:var(--surface-raised);border-block:1px solid var(--border-default)"><div class="wrap">
+  <div class="sec-head"><h2>Technical documentation and developer resources</h2><p class="lead">The official docs worth bookmarking.</p></div>
+  <div class="grid" id="docgrid"></div>
+</div></section>
+
+<section id="status"><div class="wrap">
+  <div class="sec-head"><h2>Project status</h2><p class="lead">ResourceNest is a work in progress. This is what exists today and what is still planned.</p></div>
+  <div class="card" style="padding-block:var(--s5)" id="statuslist"></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="card" style="padding:var(--s8)">
+    <h2>Get notified when new resources are added</h2>
+    <p style="font-size:16px;max-width:52ch">Share your email and we'll tell you when new roadmaps and guides go live. This form is a front-end demo for now and does not send data anywhere.</p>
+    <form class="news" id="news" novalidate>
+      <label for="em" style="position:absolute;left:-9999px">Email address</label>
+      <input id="em" class="search" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="em-err">
+      <button class="btn primary" type="submit">Notify me</button>
+    </form>
+    <p class="err" id="em-err" role="alert"></p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span style="display:inline-flex;align-items:center;gap:8px"><img src="assets/logo.svg" alt="" width="20" height="20">ResourceNest, a project by Rahul (2RC).</span><span>Links point to third-party sites we do not control.</span></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
